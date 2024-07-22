@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso Bootstrap</title>
+    <link rel="stylesheet" href="/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body data-bs-theme="dark">    
+    <div class="conteiner col-10 p-3 ">
+
+        <!-- Barra menú -->
+
+        <nav class="navbar navbar-expand-lg sticky-top " id="menu">
+            <div class="container-fluid">
+              <a class="navbar-brand " href="#">
+                <img src="/LogoSinFondo.png" width="8%">
+                Oscar A. Ortiz
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#perfil">Perfil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a type="button"  data-bs-toggle="modal" data-bs-target="#contacto" class="nav-link" >Contacto</a>
+                  </li>
+                </ul>
+                <div class="container-fluid " > 
+                    <button class="btn rounded-fill ms-auto" onclick="cambiarTema()" ><i class="bi bi-sun-fill" id="iconoModo"></i></button>
+                </div> 
+              </div>
+            </div>
+          </nav>
+
+        <!-- Carrusel -->
+
+        <div id="carrusel" class="carousel slide mt-5" >   
+            <div class="carousel-inner " >
+              <div class="carousel-item active "  >
+                <div class="d-flex justify-content-center">
+                    <div class="card h-100 " style="width: 40rem;" >
+                        <div class="carousel-image-container">
+                            <img src="/desarrolladorSalesforce.png" class="card-img-top w-100 carousel-image" alt="Dibujo de un programador en un escritorio con una computadora y el logo de Salesforce CRM" >
+                        </div>
+                        <div class="card-body">
+                        <h5 class="card-title">Desarrollador Salesforce</h5>
+                        <p class="card-text">Tecnologías utilizadas dentro del ecosistema Salesforce: LWC, Flow, SOQL, Triggers, Apex, Visualforce</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item"  >
+                <div class="d-flex justify-content-center">
+                    <div class="card h-100 " style="width: 40rem;">
+                        <div class="carousel-image-container">
+                        <img src="/DataScience.png" class="card-img-top w-100 carousel-image" alt="Dibujo de un cientifico de datos frente a una computadora y símbolos que representan a la ciencia de datos" ></div>
+                        <div class="card-body">
+                        <h5 class="card-title">Ciencia de Datos</h5>
+                        <p class="card-text">Tecnologías utilizadas: Python, POO, Librerias: Pandas, Numpy, Matplotlib, ML, SQL, Jupyter notebook</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item"  >
+                <div class="d-flex justify-content-center">
+                    <div class="card h-100 " style="width: 40rem;">
+                        <div class="carousel-image-container">
+                        <img src="/full-stack-developer.png" class="card-img-top w-100 carousel-image" alt="Dibujo de un desarrollador frente a la computadora y simbolos que respresentan al desarrollo de software" ></div>
+                        <div class="card-body">
+                        <h5 class="card-title">Desarrollador Web</h5>
+                        <p class="card-text">Tecnologías utilizadas: HTML, CSS, Javascipt, Node, React, Mongo, Bootstrap.</p>
+                        </div>
+                    </div>
+                </div>
+              </div>           
+            </div>
+            <button  class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+              <span   aria-hidden="true"><i id="prev" class="bi bi-caret-left-fill"></i></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+              <span   aria-hidden="true" ><i id="next" class="bi bi-caret-right-fill"></i></span>
+            </button>
+        </div>
+
+        <!-- Tarjeta Perfil -->
+
+        <div id="perfil" >
+          <div class="row">
+            <div class="d-flex  justify-content-center"  >
+              
+                <!--div class="col-6 "-->
+                  <div class="card p-2 col-6 tarjeta " style="width: 20rem;">
+                    <img src="/yo2.jpg" class="card-img-top imagenTarjeta" alt="Dibujo de la cara representativa de un desarrollador">
+                    <div class="card-body">
+                      <h5 class="card-title">Oscar Alejandro Ortiz</h5>
+                      <h6>Desarrollador</h6>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo excepturi tempore, cupiditate, placeat debitis ipsa vitae accusantium tempora quis ullam esse commodi aliquid necessitatibus rem explicabo modi sunt illum ducimus?</p>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verCV">
+                        Ver CV
+                      </button>
+                    </div>
+                  </div>
+                <!--/div-->
+                <!--div class="col-6"-->
+                  <div class="card p-2 col-6 tarjeta w-30" style="width: 20rem;">
+                    <img src="/yo2.jpg" class="card-img-top imagenTarjeta" alt="Dibijo de la cara representativa de un desarrollador">
+                    <div class="card-body">
+                      <h5 class="card-title">Oscar Alejandro Ortiz</h5>
+                      <h6>Desarrollador</h6>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo excepturi tempore, cupiditate, placeat debitis ipsa vitae accusantium tempora quis ullam esse commodi aliquid necessitatibus rem explicabo modi sunt illum ducimus?</p>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verCV">
+                        Ver CV
+                      </button>
+                    </div>
+                  </div>
+                <!--/div-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ver CV -->
+        
+          <!-- Modal -->
+          <div class="modal fade" id="verCV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Mi Curriculum Vitae</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <embed src="/CVOSCARAORTIZ.pdf" type="application/pdf" width="100%" height="100%">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Descargar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <!--  Contacto -->
+
+        <div id="contacto" class="modal fade"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Mensaje</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>   
+                </div>
+                <div class="modal-body">
+                  <form class="contenedorFormulario col-lg-12 col-md-8" id="miFormulario">                  
+                    <div class="row"> 
+                      <div class="col-lg-12 col-md-12 mt-3">
+                          <div id="alertaExito" class="alert alert-success text-center " style="display: none;">
+                            Los datos se enviaron correctamente   
+                            <i class="bi bi-check-lg"></i>
+                          </div>
+                        <label for="nombre">Nombre/s</label>
+                        <input id="nombre" class="form-control" name="nombre" placeholder="Ingrese el/los Nombre/s" >
+                        <div id="errorNombre"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12 col-md-12 mt-3">
+                        <label for="apellido">Apellido</label>
+                        <input id="apellido" class="form-control" name="apellido" placeholder="Ingrese el Apellido">
+                        <div id="errorApellido"></div>
+                      </div>
+                    </div>
+                    <div class="row mt-3" >
+                        <div class="col ">
+                            <label for="email" class="form-label">E-mail</label></br>
+                            <input id="email" type="email" class="form-control"  name="email" placeholder="Ingrese el Correo electronico">
+                            <div id="errorEmail"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label" >Mensaje</label>
+                        <textarea class="form-control" id="message-text" style="height: 20vh;">Hola, quiero contactarme contigo</textarea>
+                    </div>
+                    <div class="row">
+                      <div class="modal-footer mt-3 ">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" id="enviar" type="button" class="btn btn-primary btn-lg col-5">Enviar Mensaje</button>
+                      </div>
+                    </div> 
+                  </div>
+                </form>          
+              </div>
+            </div>
+        </div>
+        <script src="/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </div>
+</body>
+</html>
