@@ -1,6 +1,6 @@
 # Desarrollo de Página con Bootstrap
 
-##Dupla compuesta por:
+## Dupla compuesta por:
 ##                    Marcelo David Giglio
 ##                    Oscar Alejandro Ortiz
 
