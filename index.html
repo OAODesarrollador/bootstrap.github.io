@@ -94,37 +94,34 @@
         <!-- Tarjeta Perfil -->
 
         <div id="perfil" >
-          <div class="row">
-            <div class="d-flex  justify-content-center"  >
-              
-                <!--div class="col-6 "-->
-                  <div class="card p-2 col-6 tarjeta " style="width: 20rem;">
+          <div class="row col-md-12 justify-content-center d-flex">
+            
+                  <div class="card p-2  tarjeta" style="width: 20rem;">
                     <img src="./yo2.jpg" class="card-img-top imagenTarjeta" alt="Dibujo de la cara representativa de un desarrollador">
                     <div class="card-body">
                       <h5 class="card-title">Oscar Alejandro Ortiz</h5>
                       <h6>Desarrollador</h6>
-                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo excepturi tempore, cupiditate, placeat debitis ipsa vitae accusantium tempora quis ullam esse commodi aliquid necessitatibus rem explicabo modi sunt illum ducimus?</p>
+                      <p class="card-text">Entusiasta y en constante aprendizaje. Estudiante de Desarrollador FullStack. Con deseos de demostrar lo aprendido en este curso.</p>
                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verCV">
                         Ver CV
                       </button>
                     </div>
                   </div>
-                <!--/div-->
-                <!--div class="col-6"-->
-                  <div class="card p-2 col-6 tarjeta w-30" style="width: 20rem;">
-                    <img src="./yo2.jpg" class="card-img-top imagenTarjeta" alt="Dibijo de la cara representativa de un desarrollador">
+                
+                  <div class="card p-2 col-6 tarjeta " style="width: 20rem;">
+                    <img src="./marcelo.png" class="card-img-top imagenTarjeta" alt="Dibijo de la cara representativa de un desarrollador">
                     <div class="card-body">
-                      <h5 class="card-title">Oscar Alejandro Ortiz</h5>
+                      <h5 class="card-title">Marcelo Giglio</h5>
                       <h6>Desarrollador</h6>
-                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo excepturi tempore, cupiditate, placeat debitis ipsa vitae accusantium tempora quis ullam esse commodi aliquid necessitatibus rem explicabo modi sunt illum ducimus?</p>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verCV">
+                      <p class="card-text">Mi  nombre es Marcelo Giglio, soy de la ciudad de Rosario. Estudiante en el curso de Fullstack con Bootstrap dictado por Cilsa</p>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verCV2">
                         Ver CV
                       </button>
                     </div>
                   </div>
-                <!--/div-->
-              </div>
-            </div>
+              
+              
+            
           </div>
         </div>
 
@@ -140,6 +137,23 @@
                 </div>
                 <div class="modal-body">
                   <embed src="./CVOSCARAORTIZ.pdf" type="application/pdf" width="100%" height="100%">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Descargar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="verCV2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Mi Curriculum Vitae</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <embed src="./CVMarceloGiglio.pdf" type="application/pdf" width="100%" height="100%">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

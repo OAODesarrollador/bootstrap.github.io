@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
     color: rgb(12, 13, 14);
     display: flex;
@@ -25,4 +29,10 @@ body {
 
 .tarjeta {
   margin: 5%;
+}
+.imagenTarjeta {
+  height: 35vh;
+}
+#perfil {
+  margin-top: 120px;
 }
