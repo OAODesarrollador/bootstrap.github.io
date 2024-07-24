@@ -49,18 +49,18 @@ validar.onclick = (e) => {
     
     let isValid = true;
 
-    if( vnombre == null || vnombre.length == 0 || /^\s+$/.test(vnombre) ) { 
-        alert('errorNombre', 'Debes ingresar datos en el nombre', 'danger');
+    if( vnombre == null || vnombre.length < 2 || vnombre.length > 30  || /^\s+$/.test(vnombre) ) { 
+        alert('errorNombre', 'Debes ingresar datos en el nombre y entre 2 a 30 caracteres', 'danger');
         isValid = false;
     return
     }
-    if( vapellido == null || vapellido.length == 0 || /^\s+$/.test(vapellido) ) { 
-        alert('errorApellido', "Debe ingresar datos en el Apellido", 'danger');
+    if( vapellido == null || vapellido.length < 2 || vapellido.length > 20 || /^\s+$/.test(vapellido) ) { 
+        alert('errorApellido', "Debe ingresar datos en el Apellido y entre 2 a 20 caracteres", 'danger');
         isValid = false;
     return 
     }
-    if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(vemail)) ) { 
-        alert('errorEmail', "Debe ingresar formato válido en el E-mail. valor@valor.valor.valor ", 'danger');
+    if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+/.test(vemail)) ) { 
+        alert('errorEmail', "Debe ingresar formato válido en el E-mail. valor@valor.valor", 'danger');
         isValid = false;
     return 
     }
@@ -71,9 +71,10 @@ validar.onclick = (e) => {
         // Ajusta el tiempo según sea necesario
         setTimeout(() => {
             modalInstancia.hide(); // Oculta el formulario
+            formulario.submit();
         }, 2300); 
         
-        formulario.submit(); 
+         
         formulario.reset();// Borra los datos del formulario
        
     }
